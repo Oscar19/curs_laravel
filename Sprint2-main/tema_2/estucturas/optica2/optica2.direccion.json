@@ -1,0 +1,10 @@
+[{
+  "proveedor_id": "ObjectId",
+  "calle": " ",
+  "numero": " ",
+  "piso": " ",
+  "puerta": " ",
+  "ciudad": " ",
+  "codigo_postal": " ",
+  "pais": " "
+}]

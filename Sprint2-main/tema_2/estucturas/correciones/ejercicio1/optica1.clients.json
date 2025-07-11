@@ -1,0 +1,34 @@
+[
+{
+  "_id": ObjectId,
+  "nombre": "string",
+  "direccion": "string",
+  "telefono": "int",
+  "email": "string",
+  "fecha_registro": "date",
+  "recomendado_id": ObjectId,
+  "ventas": [
+    {
+      "proveedor_id": ObjectId,
+      "fecha": "date",
+      "empleado_id": ObjectId,
+      "gafas": {
+        "marca": "string",
+        "graduacion": {
+          "izquierda": "float",
+          "derecha": "float"
+        },
+        "montura": "string",
+        "color": "string",
+        "color_cristal": {
+          "izquierda": "string",
+          "derecha": "string"
+        },
+        "precio": "float"
+      }
+    }
+  ]
+}
+ ]
+
+

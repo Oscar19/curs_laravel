@@ -1,0 +1,180 @@
+/*1*/ db.restaurant.find()
+
+/*2*/
+db.restaurant.find(
+  {},
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*3*/
+db.restaurant.find(
+  {},
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*4*/
+db.restaurant.find(
+  {},
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    "address.zipcode": 1,
+    _id: 0
+  }
+).pretty()
+/*5*/
+db.restaurant.find({ borough: "Bronx" }).pretty()
+/*6*/
+db.restaurant.find({ borough: "Bronx" }).limit(5).pretty()
+/*7*/
+db.restaurant.find({ borough: "Bronx" }).skip(5).limit(5).pretty()
+/*8*/
+db.restaurant.find({ "grades.score": { $gt: 90 } }).pretty()
+/*9*/
+db.restaurant.find({
+    "grades.score": {
+      $gt: 80,
+      $lt: 100 
+    }
+  })
+/*10*/
+db.restaurant.find({
+    "address.coord.0": { $lt: -95.754168 }
+  }).pretty()
+/*11*/
+db.restaurant.find({
+    $and: [{ "cuisine": { $ne: "American " } },
+    { "grades.score": { $gte: 70 } },
+    { "address.coord.0": { $lte: -65.754168 } }]
+})
+/*12*/
+db.restaurant.find({
+    "cuisine": { $ne: "American " },
+    "grades.score": { $gt: 70 },
+    "address.coord.0": { $lt: -65.754168 }
+  }).pretty()
+  /*13*/
+  db.restaurant.find({
+    $and: [
+        { "cuisine": { $ne: "American " } },
+        { "grades.grade": "A" },
+        { "borough": { $ne: "Brooklyn" } }]
+}).sort({ "cuisine": -1 });
+
+/*14*/
+db.restaurant.find(
+  { name: { $regex: /^Wil/} },
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*15*/
+db.restaurant.find(
+  { name: { $regex: /ces/} },
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*16*/
+db.restaurant.find(
+  { name: { $regex: /Reg/} },
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*17*/
+db.restaurant.find(
+  {
+    borough: "Bronx",
+    cuisine: { $in: ["American ", "Chinese"] }
+  }
+).pretty()
+/*18*/
+db.restaurant.find(
+  {
+    borough: { $in: ["Staten Island", "Queens", "Bronx", "Brooklyn"] }
+  },
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*19*/
+db.restaurant.find(
+  {
+    borough: { $nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"] }
+  },
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+/*20*/
+db.restaurant.find({
+    "grades.score": { $lt: 10 },
+  },
+  {
+    restaurant_id: 1,
+    borough: 1,
+    cuisine: 1,
+    }
+  ).pretty()
+/*21*/
+db.restaurant.find(
+  {
+    cuisine: "Seafood",
+    cuisine: { $nin: ["American ", "Chinese"] },
+    name: { $not: { $regex: /^Wil/, $options: 'i' } }
+  },
+  {
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1,
+    _id: 0
+  }
+).pretty()
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+

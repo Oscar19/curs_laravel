@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$code": "function(t){return(0,c.assertArgsDefinedType)([t],[[void 0,\"string\",\"number\",\"object\"]],\"ObjectId\"),new e.ObjectId(t)}"
+  },
+  "nombre": " ",
+  "contacto": {
+    "telefono": " ",
+    "email": " "
+  }
+}]

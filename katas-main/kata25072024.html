@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios verano</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+          $('button').click(function() {
+             var nombre = $('#nombre').val();
+             var fecha = $('#fecha').val();
+                $('#list').append('<li>'+nombre+'<span>'+fecha+'</span></li>');
+                return false;
+             });
+          });
+    </script>
+</head>
+<body>
+    <span><a href="#" class="entregado">Entregado</a></span><span><a href="#" class="Reentregar">Reentregar</a></span><span><a href="#" class="eliminar">Eliminar</a></span>
+    <div class="content">
+        <h1>Entregas para el verano</h1>
+        <form>
+            Nombre: <input type="text" name="task" id="nombre">
+            Fecha : <input type="date" name="date" id="fecha">
+            <button>Submit</button>
+            <br>
+      
+            <p>Añadir tarea para el verano</p>
+            <ul id="list">
+            </ul>
+         </form>
+    </div>
+</body>
+</html>

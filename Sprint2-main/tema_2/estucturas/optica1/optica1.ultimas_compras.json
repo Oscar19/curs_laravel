@@ -1,0 +1,13 @@
+[{
+  "venta_id": "ObjectId",
+  "cliente_id": "ObjectId",
+  "gafas_pedido": [
+    {
+      "gafas_id": "ObjectId",
+      "cantidad": " ",
+      "precio": " "
+    }
+  ],
+  "fecha_venta": " ",
+  "precio": " "
+}]

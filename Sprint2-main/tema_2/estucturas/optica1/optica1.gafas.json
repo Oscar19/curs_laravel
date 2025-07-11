@@ -1,0 +1,16 @@
+[{
+  "_id": "ObjectId",
+  "marca": " ",
+  "graduacion": {
+    "izquierda": " ",
+    "derecha": " "
+  },
+  "montura": " ",
+  "color": " ",
+  "color_cristal": {
+    "izquierda": " ",
+    "derecha": " "
+  },
+  "precio": " ",
+  "proveedor_id": "ObjectId"
+}]

@@ -1,0 +1,40 @@
+[{
+  "_id": "ObjectId",
+  "marca": " ",
+  "graduacion": {
+    "izquierda": " ",
+    "derecha": " "
+  },
+  "montura": " ",
+  "color": " ",
+  "color_cristal": {
+    "izquierda": " ",
+    "derecha": " "
+  },
+  "precio": " ",
+  "proveedor_id": "ObjectId",
+  "comprador": "Object"
+}]
+{
+  "_id": ObjectId,
+  "marca": "string",
+  "graduacion": {
+    "izquierda": "float",
+    "derecha": "float"
+  },
+  "color": "string",
+  "color_cristal": {
+    "izquierda": "string",
+    "derecha": "string"
+  },
+  "precio": "float",
+  "proveedor_id": ObjectId, 
+  "proveedor_name": "string", 
+  "clientes": [
+    {
+      "nombre": "string",
+      "cliente_id": ObjectId
+    }
+  ]
+}
+

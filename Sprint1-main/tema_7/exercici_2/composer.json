@@ -1,0 +1,17 @@
+{
+    "name": "oscanguera/tema7",
+    "autoload": {
+        "psr-4": {
+            "oscanguera\\exercici_2\\": "/opt/lampp/htdocs/Sprint1/tema_7/exercici_2/"
+        }
+    },
+    
+    "autoload-dev": {
+        "psr-4": {
+            "oscanguera\\exercici_2\\tests\\": "/opt/lampp/htdocs/Sprint1/tema_7/exercici_2/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    }
+}

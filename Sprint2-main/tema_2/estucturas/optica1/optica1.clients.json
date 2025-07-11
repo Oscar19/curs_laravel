@@ -1,0 +1,18 @@
+[{
+  "_id": "ObjectId",
+  "nombre": " ",
+  "direccion": {
+    "calle": " ",
+    "numero": " ",
+    "piso": " ",
+    "puerta": " ",
+    "ciudad": " ",
+    "codigo_postal": " ",
+    "pais": " "
+  },
+  "telefono": " ",
+  "email": " ",
+  "fecha_registro": "",
+  "recomendado_id": "ObjectId",
+  "ultimas_compras": "Object"
+}]

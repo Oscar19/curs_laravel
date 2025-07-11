@@ -1,0 +1,8 @@
+[{
+  "_id": "ObjectId",
+  "gafas_id": "ObjectId",
+  "cliente_id": "ObjectId",
+  "empleado_id": "ObjectId",
+  "fecha_venta": " ",
+  "precio": " "
+}]

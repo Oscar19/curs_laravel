@@ -1,0 +1,9 @@
+[{
+  "_id": ObjectId,
+  "nombre": "string",
+  "direccion": "string",
+  "telefono": "int",
+  "fax": "int",
+  "nif": "string"
+}]
+

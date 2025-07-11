@@ -1,0 +1,31 @@
+<div class="container mx-auto my-10">
+<div class="md:w-1/2 mx-auto">
+<h1 class="text-center text-3xl font-semibold mb-4">Lista de Tareas</h1>
+</div>
+<div class="md:w-1/2 mx-auto">
+<?php if (is_array($this->tareas) && count($this->tareas) > 0): ?>
+    <ul>
+        <?php foreach ($this->tareas as $tarea): ?>
+            <li class="border-b border-gray-200 grid grid-cols-4 items-center py-4">
+            <strong class="col-span-1 text-left"><?php echo $tarea['Titulo']; ?></strong>
+            <p class="col-span-1 text-left"><?php echo $tarea['Status']; ?></p>
+            <a href="<?php echo $this->baseUrl(); ?>/tarea/detalle?id=<?php echo $tarea['Id']; ?>" class="col-span-1 text-blue-500 hover:text-blue-700 text-left">Ver Detalles</a>
+            <div class="col-span-1 text-left space-x-2">
+                <a href="<?php echo $this->baseUrl(); ?>/tarea/edita?id=<?php echo $tarea['Id'];?>" class="text-blue-500 hover:text-blue-700 edit-btn">Editar</a>
+                <form method="post" action="<?php echo $this->baseUrl(); ?>/tarea/delete?id=<?php echo $tarea['Id'];?>" style="display:inline;">
+                    <input type="hidden" name="id" value="<?php echo $tarea['Id']; ?>">
+                    <button type="submit" class="text-red-500 hover:text-red-700 delete-btn">Eliminar</button>
+                </form>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p>No hay tareas disponibles.</p>
+<?php endif; ?>
+
+</div>
+<div class="md:w-1/2 mx-auto mt-3">
+<a href="<?php echo $this->baseUrl(); ?>/tarea/add" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Añadir tarea</a>
+</div>
+</div>
